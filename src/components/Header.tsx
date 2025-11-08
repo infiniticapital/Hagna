@@ -24,39 +24,61 @@ export default function Header() {
             <img src="/hargna-horizontal.png" alt="Hargna Limited" className="h-10" />
           </Link>
 
-          <nav className="hidden md:flex items-center space-x-1 lg:space-x-8">
-            <Link to="/" className={`${location.pathname === '/' ? 'text-white' : 'text-white/80'} hover:text-white transition-colors font-medium text-sm uppercase tracking-wider relative group`}>
-              <span>{t('nav_home_label')}</span>
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-            {location.pathname === '/' && (
-              <button onClick={() => scrollToSection('about')} className="text-white/80 hover:text-white transition-colors font-medium text-sm uppercase tracking-wider relative group">
-                <span>{t('nav_about_label')}</span>
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
-              </button>
-            )}
-            <Link to="/services" className={`${location.pathname === '/services' ? 'text-white' : 'text-white/80'} hover:text-white transition-colors font-medium text-sm uppercase tracking-wider relative group`}>
-              <span>{t('nav_services_label')}</span>
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-            {location.pathname === '/' && (
-              <button onClick={() => scrollToSection('industries')} className="text-white/80 hover:text-white transition-colors font-medium text-sm uppercase tracking-wider relative group">
-                <span>{t('nav_pages_label')}</span>
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
-              </button>
-            )}
-            {location.pathname === '/' && (
-              <button onClick={() => scrollToSection('contact')} className="text-white/80 hover:text-white transition-colors font-medium text-sm uppercase tracking-wider relative group">
-                <span>{t('nav_contact_label')}</span>
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
-              </button>
+          <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
+            {location.pathname === '/' ? (
+              <>
+                <button onClick={() => scrollToSection('home')} className="text-white/80 hover:text-white transition-colors font-medium text-sm">
+                  {t('nav_home')}
+                </button>
+                <button onClick={() => scrollToSection('solutions')} className="text-white/80 hover:text-white transition-colors font-medium text-sm">
+                  {t('nav_solutions')}
+                </button>
+                <button onClick={() => scrollToSection('industries')} className="text-white/80 hover:text-white transition-colors font-medium text-sm">
+                  {t('nav_industries')}
+                </button>
+                <button onClick={() => scrollToSection('process')} className="text-white/80 hover:text-white transition-colors font-medium text-sm">
+                  {t('nav_process')}
+                </button>
+                <button onClick={() => scrollToSection('about')} className="text-white/80 hover:text-white transition-colors font-medium text-sm">
+                  {t('nav_about')}
+                </button>
+                <button onClick={() => scrollToSection('resources')} className="text-white/80 hover:text-white transition-colors font-medium text-sm">
+                  {t('nav_resources')}
+                </button>
+              </>
+            ) : (
+              <>
+                <Link to="/" className="text-white/80 hover:text-white transition-colors font-medium text-sm">
+                  {t('nav_home')}
+                </Link>
+                <Link to="/#solutions" className="text-white/80 hover:text-white transition-colors font-medium text-sm">
+                  {t('nav_solutions')}
+                </Link>
+                <Link to="/#industries" className="text-white/80 hover:text-white transition-colors font-medium text-sm">
+                  {t('nav_industries')}
+                </Link>
+                <Link to="/#process" className="text-white/80 hover:text-white transition-colors font-medium text-sm">
+                  {t('nav_process')}
+                </Link>
+                <Link to="/#about" className="text-white/80 hover:text-white transition-colors font-medium text-sm">
+                  {t('nav_about')}
+                </Link>
+                <Link to="/#resources" className="text-white/80 hover:text-white transition-colors font-medium text-sm">
+                  {t('nav_resources')}
+                </Link>
+              </>
             )}
             <button
-              onClick={() => scrollToSection('contact')}
-              className="bg-primary-600 text-white px-8 py-3 rounded-full hover:bg-primary-700 transition-all duration-300 font-semibold ml-4 shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center"
+              onClick={() => {
+                if (location.pathname === '/') {
+                  scrollToSection('contact');
+                } else {
+                  window.location.href = '/#contact';
+                }
+              }}
+              className="bg-red-600 text-white px-6 py-2.5 rounded-md hover:bg-red-700 transition-all duration-300 font-semibold text-sm"
             >
-              {t('nav_quote_button')}
-              <ArrowRight className="ml-2 w-5 h-5" />
+              {t('nav_contact')}
             </button>
           </nav>
 
@@ -93,50 +115,78 @@ export default function Header() {
         {isOpen && (
           <div className="md:hidden py-4 border-t border-white/10">
             <nav className="flex flex-col space-y-4">
-              <Link to="/" onClick={() => setIsOpen(false)} className="text-white/90 hover:text-white transition-colors font-medium text-left uppercase text-sm">
-                {t('nav_home_label').toUpperCase()}
-              </Link>
-              {location.pathname === '/' && (
-                <button onClick={() => scrollToSection('about')} className="text-white/90 hover:text-white transition-colors font-medium text-left uppercase text-sm">
-                  {t('nav_about_label').toUpperCase()}
-                </button>
-              )}
-              <Link to="/services" onClick={() => setIsOpen(false)} className="text-white/90 hover:text-white transition-colors font-medium text-left uppercase text-sm">
-                {t('nav_services_label').toUpperCase()}
-              </Link>
-              {location.pathname === '/' && (
+              {location.pathname === '/' ? (
                 <>
-                  <button onClick={() => scrollToSection('industries')} className="text-white/90 hover:text-white transition-colors font-medium text-left uppercase text-sm">
-                    {t('nav_pages_label').toUpperCase()}
+                  <button onClick={() => scrollToSection('home')} className="text-white/90 hover:text-white transition-colors font-medium text-left text-sm">
+                    {t('nav_home')}
                   </button>
-                  <button onClick={() => scrollToSection('contact')} className="text-white/90 hover:text-white transition-colors font-medium text-left uppercase text-sm">
-                    {t('nav_contact_label').toUpperCase()}
+                  <button onClick={() => scrollToSection('solutions')} className="text-white/90 hover:text-white transition-colors font-medium text-left text-sm">
+                    {t('nav_solutions')}
                   </button>
+                  <button onClick={() => scrollToSection('industries')} className="text-white/90 hover:text-white transition-colors font-medium text-left text-sm">
+                    {t('nav_industries')}
+                  </button>
+                  <button onClick={() => scrollToSection('process')} className="text-white/90 hover:text-white transition-colors font-medium text-left text-sm">
+                    {t('nav_process')}
+                  </button>
+                  <button onClick={() => scrollToSection('about')} className="text-white/90 hover:text-white transition-colors font-medium text-left text-sm">
+                    {t('nav_about')}
+                  </button>
+                  <button onClick={() => scrollToSection('resources')} className="text-white/90 hover:text-white transition-colors font-medium text-left text-sm">
+                    {t('nav_resources')}
+                  </button>
+                </>
+              ) : (
+                <>
+                  <Link to="/" onClick={() => setIsOpen(false)} className="text-white/90 hover:text-white transition-colors font-medium text-left text-sm">
+                    {t('nav_home')}
+                  </Link>
+                  <Link to="/#solutions" onClick={() => setIsOpen(false)} className="text-white/90 hover:text-white transition-colors font-medium text-left text-sm">
+                    {t('nav_solutions')}
+                  </Link>
+                  <Link to="/#industries" onClick={() => setIsOpen(false)} className="text-white/90 hover:text-white transition-colors font-medium text-left text-sm">
+                    {t('nav_industries')}
+                  </Link>
+                  <Link to="/#process" onClick={() => setIsOpen(false)} className="text-white/90 hover:text-white transition-colors font-medium text-left text-sm">
+                    {t('nav_process')}
+                  </Link>
+                  <Link to="/#about" onClick={() => setIsOpen(false)} className="text-white/90 hover:text-white transition-colors font-medium text-left text-sm">
+                    {t('nav_about')}
+                  </Link>
+                  <Link to="/#resources" onClick={() => setIsOpen(false)} className="text-white/90 hover:text-white transition-colors font-medium text-left text-sm">
+                    {t('nav_resources')}
+                  </Link>
                 </>
               )}
               <button
-                onClick={() => scrollToSection('contact')}
-                className="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors font-semibold"
+                onClick={() => {
+                  if (location.pathname === '/') {
+                    scrollToSection('contact');
+                  } else {
+                    window.location.href = '/#contact';
+                  }
+                }}
+                className="bg-red-600 text-white px-6 py-3 rounded-md hover:bg-red-700 transition-colors font-semibold text-left"
               >
-                {t('nav_quote_button').toUpperCase()}
+                {t('nav_contact')}
               </button>
               <div className="flex items-center space-x-2 pt-4 border-t border-white/10">
                 <Globe className="w-4 h-4 text-white/70" />
                 <button
                   onClick={() => setLanguage('es')}
-                  className={`px-2 py-1 rounded ${language === 'es' ? 'bg-blue-600 text-white' : 'text-white/70'} transition-colors text-sm font-medium`}
+                  className={`px-2 py-1 rounded ${language === 'es' ? 'bg-primary-600 text-white' : 'text-white/70'} transition-colors text-sm font-medium`}
                 >
                   ES
                 </button>
                 <button
                   onClick={() => setLanguage('en')}
-                  className={`px-2 py-1 rounded ${language === 'en' ? 'bg-blue-600 text-white' : 'text-white/70'} transition-colors text-sm font-medium`}
+                  className={`px-2 py-1 rounded ${language === 'en' ? 'bg-primary-600 text-white' : 'text-white/70'} transition-colors text-sm font-medium`}
                 >
                   EN
                 </button>
                 <button
                   onClick={() => setLanguage('zh')}
-                  className={`px-2 py-1 rounded ${language === 'zh' ? 'bg-blue-600 text-white' : 'text-white/70'} transition-colors text-sm font-medium`}
+                  className={`px-2 py-1 rounded ${language === 'zh' ? 'bg-primary-600 text-white' : 'text-white/70'} transition-colors text-sm font-medium`}
                 >
                   中文
                 </button>

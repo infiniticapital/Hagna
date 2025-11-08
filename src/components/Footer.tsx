@@ -25,7 +25,14 @@ export default function Footer() {
             <div className="space-y-4">
               <div className="flex items-start group">
                 <MapPin className="w-5 h-5 text-primary-500 mr-3 flex-shrink-0 mt-1" />
-                <span className="text-gray-400 group-hover:text-gray-300 transition-colors">{t('footer_location')}</span>
+                <div className="text-gray-400 group-hover:text-gray-300 transition-colors">
+                  <div className="font-semibold text-white mb-1">{t('footer_location')}</div>
+                  <div className="text-sm leading-relaxed">
+                    19/F, Tung Lee Comm Building,<br />
+                    91-97 Jervois Street, Sheung Wan<br />
+                    Hong Kong
+                  </div>
+                </div>
               </div>
               <div className="flex items-start group">
                 <MapPin className="w-5 h-5 text-primary-500 mr-3 flex-shrink-0 mt-1" />
