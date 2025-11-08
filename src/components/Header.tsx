@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Globe, Layers, ArrowRight } from 'lucide-react';
+import { Menu, X, Globe, Ship, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Header() {
@@ -21,8 +21,8 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <Link to="/" className="flex items-center space-x-3">
-            <Layers className="w-8 h-8 text-blue-500" />
-            <span className="text-2xl font-bold text-white">Cargo X</span>
+            <Ship className="w-8 h-8 text-red-600" />
+            <span className="text-2xl font-bold text-white">Hargna</span>
           </Link>
 
           <nav className="hidden md:flex items-center space-x-1 lg:space-x-8">
