@@ -1,5 +1,5 @@
 import { useState, FormEvent } from 'react';
-import { Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { Send, CheckCircle, AlertCircle, Phone } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { supabase } from '../lib/supabase';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
@@ -121,9 +121,19 @@ export default function Contact() {
           <h2 className="text-5xl font-extrabold text-gray-900 mb-6">
             {t('contact_title')}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             {t('contact_subtitle')}
           </p>
+
+          <a
+            href="https://wa.me/85225211836"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-green-600 to-green-700 text-white px-8 py-4 rounded-full hover:from-green-700 hover:to-green-800 transition-all duration-300 transform hover:scale-105 font-semibold text-lg shadow-xl"
+          >
+            <Phone className="w-5 h-5" />
+            <span>+852-2521-1836</span>
+          </a>
         </div>
 
         <form onSubmit={handleSubmit} className="bg-white p-10 rounded-2xl shadow-2xl border border-gray-100">
