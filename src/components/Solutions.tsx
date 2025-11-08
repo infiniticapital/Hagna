@@ -55,13 +55,13 @@ export default function Solutions() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20 animate-slide-up">
           <div className="inline-block px-5 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-semibold mb-6 border border-primary-100">
-            What We Offer
+            {t('solutions_label')}
           </div>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6 tracking-tight">
             {t('solutions_title')}
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Comprehensive solutions tailored to streamline your China sourcing operations
+            {t('solutions_subtitle')}
           </p>
         </div>
 
@@ -86,7 +86,7 @@ export default function Solutions() {
                   onClick={scrollToContact}
                   className="text-primary-600 font-semibold flex items-center group-hover:gap-2 transition-all hover:text-primary-700"
                 >
-                  Learn more
+                  {t('solutions_learn_more')}
                   <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
@@ -99,16 +99,16 @@ export default function Solutions() {
           <div className="absolute top-0 right-0 w-96 h-96 bg-primary-600/10 rounded-full blur-3xl"></div>
           <div className="relative text-center">
             <h3 className="text-3xl sm:text-4xl font-bold text-white mb-6 tracking-tight">
-              Ready to Transform Your Sourcing?
+              {t('solutions_cta_title')}
             </h3>
             <p className="text-gray-300 text-lg sm:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-              Get a customized quote tailored to your business needs and discover how we can accelerate your growth
+              {t('solutions_cta_subtitle')}
             </p>
             <button
               onClick={scrollToContact}
               className="bg-primary-600 text-white px-12 py-5 rounded-full hover:bg-primary-700 transition-all duration-300 transform hover:scale-105 font-semibold text-lg shadow-2xl shadow-primary-900/50 inline-flex items-center hover:shadow-primary-900/70"
             >
-              Get Started Today
+              {t('solutions_cta_button')}
               <ArrowRight className="ml-3 w-5 h-5" />
             </button>
           </div>

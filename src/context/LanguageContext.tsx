@@ -146,7 +146,14 @@ const translations = {
     value_innovation: 'Innovación',
     value_innovation_desc: 'Soluciones líderes',
     value_growth: 'Crecimiento',
-    value_growth_desc: 'Mejora continua'
+    value_growth_desc: 'Mejora continua',
+    solutions_label: 'Lo que ofrecemos',
+    solutions_subtitle: 'Soluciones integrales adaptadas para optimizar tus operaciones de abastecimiento desde China',
+    solutions_learn_more: 'Conocer más',
+    solutions_cta_title: '¿Listo para transformar tu abastecimiento?',
+    solutions_cta_subtitle: 'Obtén una cotización personalizada adaptada a las necesidades de tu negocio y descubre cómo podemos acelerar tu crecimiento',
+    solutions_cta_button: 'Comenzar hoy',
+    contact_badge: 'Ponerse en contacto'
   },
   en: {
     nav_home: 'Home',
@@ -285,7 +292,14 @@ const translations = {
     value_innovation: 'Innovation',
     value_innovation_desc: 'Leading solutions',
     value_growth: 'Growth',
-    value_growth_desc: 'Continuous improvement'
+    value_growth_desc: 'Continuous improvement',
+    solutions_label: 'What We Offer',
+    solutions_subtitle: 'Comprehensive solutions tailored to streamline your China sourcing operations',
+    solutions_learn_more: 'Learn more',
+    solutions_cta_title: 'Ready to Transform Your Sourcing?',
+    solutions_cta_subtitle: 'Get a customized quote tailored to your business needs and discover how we can accelerate your growth',
+    solutions_cta_button: 'Get Started Today',
+    contact_badge: 'Get in Touch'
   },
   zh: {
     nav_home: '首页',
@@ -424,7 +438,14 @@ const translations = {
     value_innovation: '创新',
     value_innovation_desc: '领先解决方案',
     value_growth: '增长',
-    value_growth_desc: '持续改进'
+    value_growth_desc: '持续改进',
+    solutions_label: '我们提供的服务',
+    solutions_subtitle: '为优化您的中国采购业务量身定制的综合解决方案',
+    solutions_learn_more: '了解更多',
+    solutions_cta_title: '准备好改变您的采购方式了吗？',
+    solutions_cta_subtitle: '获取根据您的业务需求定制的报价，了解我们如何加速您的增长',
+    solutions_cta_button: '立即开始',
+    contact_badge: '联系我们'
   }
 };
 

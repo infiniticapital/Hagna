@@ -116,7 +116,7 @@ export default function Contact() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="inline-block px-4 py-2 bg-green-100 text-green-600 rounded-full text-sm font-semibold mb-4">
-            Get in Touch
+            {t('contact_badge')}
           </div>
           <h2 className="text-5xl font-extrabold text-gray-900 mb-6">
             {t('contact_title')}

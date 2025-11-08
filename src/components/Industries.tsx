@@ -28,10 +28,10 @@ export default function Industries() {
           {industries.map((industry, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-red-700 to-red-800 p-8 rounded-xl hover:shadow-2xl transition-all transform hover:-translate-y-2 text-white group"
+              className="bg-gradient-to-br from-red-700 to-red-800 p-6 rounded-xl hover:shadow-2xl transition-all transform hover:-translate-y-2 text-white group min-h-[180px] flex flex-col"
             >
-              <industry.icon className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform" />
-              <h3 className="text-lg font-semibold leading-snug">
+              <industry.icon className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform flex-shrink-0" />
+              <h3 className="text-base font-semibold leading-tight">
                 {industry.name}
               </h3>
             </div>

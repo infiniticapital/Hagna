@@ -5,7 +5,6 @@ import Industries from '../components/Industries';
 import About from '../components/About';
 import Testimonials from '../components/Testimonials';
 import Resources from '../components/Resources';
-import CostCalculator from '../components/CostCalculator';
 import Contact from '../components/Contact';
 
 export default function HomePage() {
@@ -17,7 +16,6 @@ export default function HomePage() {
       <Industries />
       <About />
       <Testimonials />
-      <CostCalculator />
       <Resources />
       <Contact />
     </>
