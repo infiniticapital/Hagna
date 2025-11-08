@@ -27,43 +27,43 @@ export default function Header() {
           <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {location.pathname === '/' ? (
               <>
-                <button onClick={() => scrollToSection('home')} className="text-white/80 hover:text-white transition-colors font-medium text-sm">
+                <button onClick={() => scrollToSection('home')} className="text-white/80 hover:text-white transition-colors font-medium text-base">
                   {t('nav_home')}
                 </button>
-                <button onClick={() => scrollToSection('solutions')} className="text-white/80 hover:text-white transition-colors font-medium text-sm">
+                <button onClick={() => scrollToSection('solutions')} className="text-white/80 hover:text-white transition-colors font-medium text-base">
                   {t('nav_solutions')}
                 </button>
-                <button onClick={() => scrollToSection('industries')} className="text-white/80 hover:text-white transition-colors font-medium text-sm">
+                <button onClick={() => scrollToSection('industries')} className="text-white/80 hover:text-white transition-colors font-medium text-base">
                   {t('nav_industries')}
                 </button>
-                <button onClick={() => scrollToSection('process')} className="text-white/80 hover:text-white transition-colors font-medium text-sm">
+                <button onClick={() => scrollToSection('process')} className="text-white/80 hover:text-white transition-colors font-medium text-base">
                   {t('nav_process')}
                 </button>
-                <button onClick={() => scrollToSection('about')} className="text-white/80 hover:text-white transition-colors font-medium text-sm">
+                <button onClick={() => scrollToSection('about')} className="text-white/80 hover:text-white transition-colors font-medium text-base">
                   {t('nav_about')}
                 </button>
-                <button onClick={() => scrollToSection('resources')} className="text-white/80 hover:text-white transition-colors font-medium text-sm">
+                <button onClick={() => scrollToSection('resources')} className="text-white/80 hover:text-white transition-colors font-medium text-base">
                   {t('nav_resources')}
                 </button>
               </>
             ) : (
               <>
-                <Link to="/" className="text-white/80 hover:text-white transition-colors font-medium text-sm">
+                <Link to="/" className="text-white/80 hover:text-white transition-colors font-medium text-base">
                   {t('nav_home')}
                 </Link>
-                <Link to="/#solutions" className="text-white/80 hover:text-white transition-colors font-medium text-sm">
+                <Link to="/#solutions" className="text-white/80 hover:text-white transition-colors font-medium text-base">
                   {t('nav_solutions')}
                 </Link>
-                <Link to="/#industries" className="text-white/80 hover:text-white transition-colors font-medium text-sm">
+                <Link to="/#industries" className="text-white/80 hover:text-white transition-colors font-medium text-base">
                   {t('nav_industries')}
                 </Link>
-                <Link to="/#process" className="text-white/80 hover:text-white transition-colors font-medium text-sm">
+                <Link to="/#process" className="text-white/80 hover:text-white transition-colors font-medium text-base">
                   {t('nav_process')}
                 </Link>
-                <Link to="/#about" className="text-white/80 hover:text-white transition-colors font-medium text-sm">
+                <Link to="/#about" className="text-white/80 hover:text-white transition-colors font-medium text-base">
                   {t('nav_about')}
                 </Link>
-                <Link to="/#resources" className="text-white/80 hover:text-white transition-colors font-medium text-sm">
+                <Link to="/#resources" className="text-white/80 hover:text-white transition-colors font-medium text-base">
                   {t('nav_resources')}
                 </Link>
               </>
@@ -76,7 +76,7 @@ export default function Header() {
                   window.location.href = '/#contact';
                 }
               }}
-              className="bg-red-600 text-white px-6 py-2.5 rounded-md hover:bg-red-700 transition-all duration-300 font-semibold text-sm"
+              className="bg-red-600 text-white px-6 py-2.5 rounded-md hover:bg-red-700 transition-all duration-300 font-semibold text-base"
             >
               {t('nav_contact')}
             </button>
@@ -117,43 +117,43 @@ export default function Header() {
             <nav className="flex flex-col space-y-4">
               {location.pathname === '/' ? (
                 <>
-                  <button onClick={() => scrollToSection('home')} className="text-white/90 hover:text-white transition-colors font-medium text-left text-sm">
+                  <button onClick={() => scrollToSection('home')} className="text-white/90 hover:text-white transition-colors font-medium text-left text-base">
                     {t('nav_home')}
                   </button>
-                  <button onClick={() => scrollToSection('solutions')} className="text-white/90 hover:text-white transition-colors font-medium text-left text-sm">
+                  <button onClick={() => scrollToSection('solutions')} className="text-white/90 hover:text-white transition-colors font-medium text-left text-base">
                     {t('nav_solutions')}
                   </button>
-                  <button onClick={() => scrollToSection('industries')} className="text-white/90 hover:text-white transition-colors font-medium text-left text-sm">
+                  <button onClick={() => scrollToSection('industries')} className="text-white/90 hover:text-white transition-colors font-medium text-left text-base">
                     {t('nav_industries')}
                   </button>
-                  <button onClick={() => scrollToSection('process')} className="text-white/90 hover:text-white transition-colors font-medium text-left text-sm">
+                  <button onClick={() => scrollToSection('process')} className="text-white/90 hover:text-white transition-colors font-medium text-left text-base">
                     {t('nav_process')}
                   </button>
-                  <button onClick={() => scrollToSection('about')} className="text-white/90 hover:text-white transition-colors font-medium text-left text-sm">
+                  <button onClick={() => scrollToSection('about')} className="text-white/90 hover:text-white transition-colors font-medium text-left text-base">
                     {t('nav_about')}
                   </button>
-                  <button onClick={() => scrollToSection('resources')} className="text-white/90 hover:text-white transition-colors font-medium text-left text-sm">
+                  <button onClick={() => scrollToSection('resources')} className="text-white/90 hover:text-white transition-colors font-medium text-left text-base">
                     {t('nav_resources')}
                   </button>
                 </>
               ) : (
                 <>
-                  <Link to="/" onClick={() => setIsOpen(false)} className="text-white/90 hover:text-white transition-colors font-medium text-left text-sm">
+                  <Link to="/" onClick={() => setIsOpen(false)} className="text-white/90 hover:text-white transition-colors font-medium text-left text-base">
                     {t('nav_home')}
                   </Link>
-                  <Link to="/#solutions" onClick={() => setIsOpen(false)} className="text-white/90 hover:text-white transition-colors font-medium text-left text-sm">
+                  <Link to="/#solutions" onClick={() => setIsOpen(false)} className="text-white/90 hover:text-white transition-colors font-medium text-left text-base">
                     {t('nav_solutions')}
                   </Link>
-                  <Link to="/#industries" onClick={() => setIsOpen(false)} className="text-white/90 hover:text-white transition-colors font-medium text-left text-sm">
+                  <Link to="/#industries" onClick={() => setIsOpen(false)} className="text-white/90 hover:text-white transition-colors font-medium text-left text-base">
                     {t('nav_industries')}
                   </Link>
-                  <Link to="/#process" onClick={() => setIsOpen(false)} className="text-white/90 hover:text-white transition-colors font-medium text-left text-sm">
+                  <Link to="/#process" onClick={() => setIsOpen(false)} className="text-white/90 hover:text-white transition-colors font-medium text-left text-base">
                     {t('nav_process')}
                   </Link>
-                  <Link to="/#about" onClick={() => setIsOpen(false)} className="text-white/90 hover:text-white transition-colors font-medium text-left text-sm">
+                  <Link to="/#about" onClick={() => setIsOpen(false)} className="text-white/90 hover:text-white transition-colors font-medium text-left text-base">
                     {t('nav_about')}
                   </Link>
-                  <Link to="/#resources" onClick={() => setIsOpen(false)} className="text-white/90 hover:text-white transition-colors font-medium text-left text-sm">
+                  <Link to="/#resources" onClick={() => setIsOpen(false)} className="text-white/90 hover:text-white transition-colors font-medium text-left text-base">
                     {t('nav_resources')}
                   </Link>
                 </>
