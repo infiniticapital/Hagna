@@ -127,13 +127,13 @@ export default function Contact() {
           </p>
 
           <a
-            href="https://wa.me/85225211836"
+            href="https://wa.me/862213516220193"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-gradient-to-r from-green-600 to-green-700 text-white px-8 py-4 rounded-full hover:from-green-700 hover:to-green-800 transition-all duration-300 transform hover:scale-105 font-semibold text-lg shadow-xl"
           >
             <Phone className="w-5 h-5" />
-            <span>+852-2521-1836</span>
+            <span>+86 22 13516220193</span>
           </a>
         </div>
 
