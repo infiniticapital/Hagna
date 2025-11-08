@@ -26,14 +26,22 @@ export default function Hero() {
       <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="max-w-3xl animate-fade-in">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-5 leading-[1.2] tracking-normal">
-            {t('hero_title').split(' ').map((word, i, arr) => (
-              <span key={i}>
-                {word}
-                {i === arr.length - 1 && <span className="text-primary-500">.</span>}
-                {i < arr.length - 1 && ' '}
-                {(i === 1 || (arr.length > 4 && i === 3)) && <br />}
-              </span>
-            ))}
+            {t('hero_title').includes('Caribe') ? (
+              <>
+                Puente confiable entre el Caribe<br />
+                y las fábricas China<span className="text-primary-500">.</span>
+              </>
+            ) : t('hero_title').includes('Caribbean') ? (
+              <>
+                A trusted bridge between the Caribbean<br />
+                and Chinese factories<span className="text-primary-500">.</span>
+              </>
+            ) : (
+              <>
+                加勒比与中国工厂之间<br />
+                的可靠桥梁<span className="text-primary-500">.</span>
+              </>
+            )}
           </h1>
           <p className="text-sm sm:text-base lg:text-lg text-gray-300 mb-10 leading-relaxed max-w-xl">
             {t('hero_subtitle')}
