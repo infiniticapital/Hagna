@@ -21,7 +21,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <Link to="/" className="flex items-center space-x-3">
-            <img src="/logo Hargna.png" alt="Hargna Limited" className="h-12" />
+            <img src="/hargna-horizontal.png" alt="Hargna Limited" className="h-10" />
           </Link>
 
           <nav className="hidden md:flex items-center space-x-1 lg:space-x-8">
