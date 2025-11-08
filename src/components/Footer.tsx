@@ -10,9 +10,9 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
             <img
-              src="/IMG_3324.PNG"
-              alt="Hargna"
-              className="h-12 w-auto mb-6 brightness-0 invert"
+              src="/hargna-horizontal1 copy.png"
+              alt="Hargna Limited Hong Kong"
+              className="h-16 w-auto mb-6"
               loading="lazy"
             />
             <p className="text-gray-400 leading-relaxed text-base">
@@ -55,7 +55,9 @@ export default function Footer() {
               </div>
               <div className="flex items-center group">
                 <Phone className="w-5 h-5 text-primary-500 mr-3" />
-                <span className="text-gray-400 group-hover:text-gray-300 transition-colors">WhatsApp</span>
+                <a href="https://wa.me/85225211836" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary-400 transition-colors">
+                  +852-2521-1836
+                </a>
               </div>
             </div>
           </div>
