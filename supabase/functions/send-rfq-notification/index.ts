@@ -38,7 +38,7 @@ async function sendEmail(to: string, subject: string, html: string) {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      from: 'Hargna Limited <noreply@hargna.com>',
+      from: 'Hargna Limited <ventas@hargna.com>',
       to: [to],
       subject: subject,
       html: html,
@@ -160,7 +160,7 @@ Deno.serve(async (req: Request) => {
       </div>
 
       <p>Mientras tanto, si tiene alguna pregunta urgente, puede contactarnos:</p>
-      <p>📧 <a href="mailto:info@hargna.com">info@hargna.com</a><br>
+      <p>📧 <a href="mailto:ventas@hargna.com">ventas@hargna.com</a><br>
       📱 WhatsApp: [Agregar número]</p>
 
       <p>Gracias por confiar en Hargna Limited.</p>
@@ -178,7 +178,7 @@ Deno.serve(async (req: Request) => {
 
     const results = await Promise.allSettled([
       sendEmail(
-        'info@hargna.com',
+        'ventas@hargna.com',
         `Nueva RFQ de ${rfqData.company} - ${rfqData.products.substring(0, 50)}`,
         emailToHargnaHtml
       ),

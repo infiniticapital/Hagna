@@ -49,8 +49,8 @@ export default function Footer() {
             <div className="space-y-4">
               <div className="flex items-center group">
                 <Mail className="w-5 h-5 text-primary-500 mr-3" />
-                <a href="mailto:info@hargna.com" className="text-gray-400 hover:text-primary-400 transition-colors">
-                  info@hargna.com
+                <a href="mailto:ventas@hargna.com" className="text-gray-400 hover:text-primary-400 transition-colors">
+                  ventas@hargna.com
                 </a>
               </div>
               <div className="flex items-center group">
