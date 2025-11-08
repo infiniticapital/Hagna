@@ -27,28 +27,28 @@ export default function Header() {
 
           <nav className="hidden md:flex items-center space-x-1 lg:space-x-8">
             <Link to="/" className={`${location.pathname === '/' ? 'text-white' : 'text-white/80'} hover:text-white transition-colors font-medium text-sm uppercase tracking-wider relative group`}>
-              <span>Home</span>
+              <span>{t('nav_home_label')}</span>
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             {location.pathname === '/' && (
               <button onClick={() => scrollToSection('about')} className="text-white/80 hover:text-white transition-colors font-medium text-sm uppercase tracking-wider relative group">
-                <span>About</span>
+                <span>{t('nav_about_label')}</span>
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
               </button>
             )}
             <Link to="/services" className={`${location.pathname === '/services' ? 'text-white' : 'text-white/80'} hover:text-white transition-colors font-medium text-sm uppercase tracking-wider relative group`}>
-              <span>Services</span>
+              <span>{t('nav_services_label')}</span>
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             {location.pathname === '/' && (
               <button onClick={() => scrollToSection('industries')} className="text-white/80 hover:text-white transition-colors font-medium text-sm uppercase tracking-wider relative group">
-                <span>Pages</span>
+                <span>{t('nav_pages_label')}</span>
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
               </button>
             )}
             {location.pathname === '/' && (
               <button onClick={() => scrollToSection('contact')} className="text-white/80 hover:text-white transition-colors font-medium text-sm uppercase tracking-wider relative group">
-                <span>Contact</span>
+                <span>{t('nav_contact_label')}</span>
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
               </button>
             )}
@@ -56,7 +56,7 @@ export default function Header() {
               onClick={() => scrollToSection('contact')}
               className="bg-primary-600 text-white px-8 py-3 rounded-full hover:bg-primary-700 transition-all duration-300 font-semibold ml-4 shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center"
             >
-              Get a Quote
+              {t('nav_quote_button')}
               <ArrowRight className="ml-2 w-5 h-5" />
             </button>
           </nav>
@@ -95,23 +95,23 @@ export default function Header() {
           <div className="md:hidden py-4 border-t border-white/10">
             <nav className="flex flex-col space-y-4">
               <Link to="/" onClick={() => setIsOpen(false)} className="text-white/90 hover:text-white transition-colors font-medium text-left uppercase text-sm">
-                HOME
+                {t('nav_home_label').toUpperCase()}
               </Link>
               {location.pathname === '/' && (
                 <button onClick={() => scrollToSection('about')} className="text-white/90 hover:text-white transition-colors font-medium text-left uppercase text-sm">
-                  ABOUT
+                  {t('nav_about_label').toUpperCase()}
                 </button>
               )}
               <Link to="/services" onClick={() => setIsOpen(false)} className="text-white/90 hover:text-white transition-colors font-medium text-left uppercase text-sm">
-                SERVICES
+                {t('nav_services_label').toUpperCase()}
               </Link>
               {location.pathname === '/' && (
                 <>
                   <button onClick={() => scrollToSection('industries')} className="text-white/90 hover:text-white transition-colors font-medium text-left uppercase text-sm">
-                    PAGES
+                    {t('nav_pages_label').toUpperCase()}
                   </button>
                   <button onClick={() => scrollToSection('contact')} className="text-white/90 hover:text-white transition-colors font-medium text-left uppercase text-sm">
-                    CONTACT
+                    {t('nav_contact_label').toUpperCase()}
                   </button>
                 </>
               )}
@@ -119,7 +119,7 @@ export default function Header() {
                 onClick={() => scrollToSection('contact')}
                 className="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors font-semibold"
               >
-                GET A QUOTE
+                {t('nav_quote_button').toUpperCase()}
               </button>
               <div className="flex items-center space-x-2 pt-4 border-t border-white/10">
                 <Globe className="w-4 h-4 text-white/70" />

@@ -12,10 +12,10 @@ export default function About() {
   ];
 
   const values = [
-    { icon: Target, title: 'Quality', description: 'Commitment to excellence' },
-    { icon: Users, title: 'Teamwork', description: 'Collaborative approach' },
-    { icon: Award, title: 'Innovation', description: 'Leading solutions' },
-    { icon: TrendingUp, title: 'Growth', description: 'Continuous improvement' }
+    { icon: Target, title: t('value_quality'), description: t('value_quality_desc') },
+    { icon: Users, title: t('value_teamwork'), description: t('value_teamwork_desc') },
+    { icon: Award, title: t('value_innovation'), description: t('value_innovation_desc') },
+    { icon: TrendingUp, title: t('value_growth'), description: t('value_growth_desc') }
   ];
 
   return (

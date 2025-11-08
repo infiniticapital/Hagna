@@ -44,14 +44,14 @@ export default function Hero() {
               onClick={scrollToContact}
               className="group bg-primary-600 text-white px-10 py-4 rounded-full hover:bg-primary-700 transition-all duration-300 transform hover:scale-105 font-semibold text-base uppercase tracking-wide shadow-2xl shadow-primary-900/50 flex items-center justify-center hover:shadow-primary-900/70"
             >
-              Get a Quote
+              {t('hero_cta_quote')}
               <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <button
               onClick={scrollToSolutions}
               className="bg-transparent text-white px-10 py-4 rounded-full border-2 border-white/30 hover:bg-white/10 hover:border-white/50 transition-all duration-300 font-semibold text-base uppercase tracking-wide flex items-center justify-center backdrop-blur-sm"
             >
-              Our Services
+              {t('hero_cta_services')}
             </button>
           </div>
         </div>
