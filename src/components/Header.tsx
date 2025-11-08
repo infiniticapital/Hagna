@@ -20,8 +20,12 @@ export default function Header() {
     <header className="fixed top-0 w-full bg-dark-900/90 backdrop-blur-xl z-50 border-b border-white/5 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <Link to="/" className="flex items-center">
-            <img src="/hargna-horizontal1 copy.png" alt="Hargna Limited Hong Kong" className="h-14 w-auto" />
+          <Link to="/" className="flex items-center space-x-3">
+            <img src="/hargna-horizontal1 copy.png" alt="Hargna Limited" className="h-14 w-auto" />
+            <div className="flex flex-col">
+              <span className="text-white font-bold text-lg leading-tight">HARGNA LIMITED</span>
+              <span className="text-white text-xs">HONG KONG</span>
+            </div>
           </Link>
 
           <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
