@@ -29,7 +29,7 @@ export default function Hero() {
             {t('hero_title').includes('Caribe') ? (
               <>
                 Puente confiable entre el Caribe<br />
-                y las fábricas China<span className="text-primary-500">.</span>
+                y las fábricas de China<span className="text-primary-500">.</span>
               </>
             ) : t('hero_title').includes('Caribbean') ? (
               <>
