@@ -25,12 +25,6 @@ export default function Contact() {
     setSubmitStatus('idle');
     clearErrors();
 
-    if (!executeRecaptcha) {
-      setSubmitStatus('error');
-      setIsSubmitting(false);
-      return;
-    }
-
     const formData = new FormData(e.currentTarget);
 
     const requiredFields = ['company', 'name', 'email', 'phone', 'products'];
@@ -51,7 +45,14 @@ export default function Contact() {
     }
 
     try {
-      const token = await executeRecaptcha('rfq_submission');
+      let token = '';
+      if (executeRecaptcha) {
+        try {
+          token = await executeRecaptcha('rfq_submission');
+        } catch (recaptchaError) {
+          console.warn('reCAPTCHA not available, continuing without it');
+        }
+      }
 
       const data = {
         company: formData.get('company') as string,
