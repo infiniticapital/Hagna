@@ -40,7 +40,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist # <-- MODIFICADO (Cambiado de 'docs' a 'dist')
+          path: docs # <-- MODIFICADO (Cambiado de 'docs' a 'dist')
 
   deploy:
     needs: build
